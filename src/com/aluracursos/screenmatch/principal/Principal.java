@@ -1,3 +1,5 @@
+package com.aluracursos.screenmatch.principal;
+
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempo;
 import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
 import com.aluracursos.screenmatch.modelos.Episodios;
@@ -9,7 +11,7 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula("Encanto");
+        Pelicula miPelicula = new Pelicula("Encanto", 2011);
         miPelicula.setFechaDeLanzamiento(2011);
         miPelicula.setDuracionEnMinutos(120);
         miPelicula.setIncluidoEnElPlan(true);
@@ -18,25 +20,20 @@ public class Principal {
         miPelicula.evalua(10);
         miPelicula.evalua(10);
         miPelicula.evalua(7.8);
-//        System.out.println(miPelicula.getTotalDeEvaluaciones());
-//        System.out.println(miPelicula.calculaMedia());
-
 
         System.out.println(miPelicula.getNombre());
         System.out.println(miPelicula.getTotalDeEvaluaciones());
         System.out.println(miPelicula.getFechaDeLanzamiento());
         System.out.println(miPelicula.getDuracionEnMinutos());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del dragón");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragón", 2022);
         casaDragon.setTemporada(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula("Matrix");
+        Pelicula otraPelicula = new Pelicula("Matrix", 1998);
         otraPelicula.setFechaDeLanzamiento(1998);
         otraPelicula.setDuracionEnMinutos(188);
 
@@ -61,7 +58,7 @@ public class Principal {
 
 //        otraPelicula.muestraFichaTecnica();
 
-        var peliculaDeBruno = new Pelicula("El señor de los anillos");
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);
 

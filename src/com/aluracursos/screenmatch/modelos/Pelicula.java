@@ -6,8 +6,8 @@ public class Pelicula extends Titulo implements Clasificacion {
 
     private String director;
 
-    public Pelicula(String nombre) {
-        this.setNombre("El señor de los anillos");
+    public Pelicula(String nombre, int fechaDeLanzamiento) {
+        super(nombre, fechaDeLanzamiento);
     }
 
 
